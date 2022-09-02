@@ -14,9 +14,10 @@ services:
     build: ./social_app_frontend
     command: npm start
     volumes:
-      - /app
+      - ./social_app_frontend:/app
       - /app/node_modules
     ports:
       - 3000:3000
     environment:
       - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
